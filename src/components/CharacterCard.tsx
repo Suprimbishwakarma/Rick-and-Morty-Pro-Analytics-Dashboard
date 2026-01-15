@@ -31,7 +31,7 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
   };
 
   return (
-    <div className="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow:2xl transition-all duration-300 group border border-gray-700">
+    <div className="bg-[#6f9283] rounded-lg overflow-hidden shadow-lg hover:shadow:2xl transition-all duration-300 group border border-gray-700">
       {/*Image section of the card*/}
       <div className="relative overflow-hidden aspect-square">
         <img
