@@ -10,6 +10,18 @@ interface CharacterCardProps {
 
 const CharacterCard = ({ character }: CharacterCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
+
+  const getStatusColor = () => {
+    if (character.status === "Alive") {
+      return "bg-green-500";
+    } else if (character.status === "Dead") {
+      return "bg-red-500";
+    } else {
+      return "bg-gray-500";
+    }
+  };
+
+  // Function that gets executed when we click the button
   const handleFavoriteClick = (event: React.MouseEvent) => {
     event.preventDefault();
     event.stopPropagation();
@@ -19,7 +31,7 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
   };
 
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow:2xl transition-all duration-300 group border border-gray-700">
+    <div className="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow:2xl transition-all duration-300 group border border-gray-700">
       {/*Image section of the card*/}
       <div className="relative overflow-hidden aspect-square">
         <img
@@ -51,6 +63,7 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
 
           {/*Status and the species of the character*/}
           <div className="flex items-center gap-2 text-sm text-gray-300 mb-4">
+            <span className={`w-3 h-3 rounded-full ${getStatusColor}`} />
             <span>
               {character.status} - {character.species}
             </span>
@@ -76,7 +89,7 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
 // This is a simple component while data is loading
 export function CharacterCardSkeleton() {
   return (
-    <div className="bg-gray-800 rounded-lg overflow-hidden h-96 animate-pulse border border-gray-700">
+    <div className="bg-gray-700 rounded-lg overflow-hidden h-96 animate-pulse border border-gray-700">
       <div className="h-64 bg-gray-700 w-full" />
       <div className="p-4 space-y-3">
         <div className="h-6 bg-gray-700 rounded w-3/4" />
