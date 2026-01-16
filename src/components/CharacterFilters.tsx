@@ -14,7 +14,7 @@ function CharacterFilters({ filters, onFiltersChange }: CharacterFiltersProps) {
   };
 
   return (
-    <div className="bg-[#6f9283] p-4 rounded-lg shadow-md mb-6 border border-gray-700">
+    <div className="bg-[#2f3134] p-4 rounded-lg shadow-md mb-6">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/*Character Filter by name*/}
         <div className="relative">
