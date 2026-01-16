@@ -47,7 +47,7 @@ export interface Info {
 
 export interface ApiResponse<T> {
   info: Info;
-  result: T[];
+  results: T[];
 }
 
 export interface FilterParams {
