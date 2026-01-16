@@ -58,7 +58,9 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
       {/*Information section*/}
       <Link to={`/character/${character.id}`} className="block p-4">
         {/*Name of the character*/}
-        <h2 className="text-xl font-bold text-white mb-2">{character.name}</h2>
+        <h2 className="text-xl font-bold text-white mb-2 hover:text-purple-900">
+          {character.name}
+        </h2>
 
         {/*Status and the species of the character*/}
         <div className="flex items-center gap-2 text-sm text-gray-900 mb-4">
