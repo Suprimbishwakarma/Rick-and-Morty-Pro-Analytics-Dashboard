@@ -7,7 +7,7 @@ import {
 } from "../types/dataTypes";
 
 // base URL definition for the API
-const API_BASE_URL = "https://rickandmortyapi.com";
+const API_BASE_URL = "https://rickandmortyapi.com/api";
 
 // axios instance creation
 const api = axios.create({
