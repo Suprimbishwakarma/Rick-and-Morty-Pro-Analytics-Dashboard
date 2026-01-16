@@ -1,16 +1,15 @@
 import { type Character } from "../types/dataTypes";
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 // simple props to pass into the function
 interface CharacterCardProps {
   character: Character;
+  isFavorite: boolean;
+  onToggleFavorite: (e: React.MouseEvent, char: Character) => void;
 }
 
-const CharacterCard = ({ character }: CharacterCardProps) => {
-  const [isFavorite, setIsFavorite] = useState(false);
-
+const CharacterCard = ({ character, isFavorite, onToggleFavorite }: CharacterCardProps) => {
   const getStatusColor = () => {
     if (character.status === "Alive") {
       return "bg-green-800";
@@ -23,11 +22,7 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
 
   // Function that gets executed when we click the button
   const handleFavoriteClick = (event: React.MouseEvent) => {
-    event.preventDefault();
-    event.stopPropagation();
-
-    // this flips the value: true -> false and false -> true
-    setIsFavorite(!isFavorite);
+    onToggleFavorite(event, character);
   };
 
   return (
