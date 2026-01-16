@@ -53,35 +53,33 @@ const CharacterCard = ({ character }: CharacterCardProps) => {
             }
           />
         </button>
-
-        {/*Information section*/}
-        <Link to={`/character/${character.id}`} className="block p-4">
-          {/*Name of the character*/}
-          <h2 className="text-xl font-bold text-white mb-2">
-            {character.name}
-          </h2>
-
-          {/*Status and the species of the character*/}
-          <div className="flex items-center gap-2 text-sm text-gray-300 mb-4">
-            <span className={`w-3 h-3 rounded-full ${getStatusColor}`} />
-            <span>
-              {character.status} - {character.species}
-            </span>
-          </div>
-
-          {/*Minor details about the characters*/}
-          <div className="text-sm text-gray-400">
-            <p className="mb-1">
-              <span className="font-semibold text-gray-500">Gender:</span>{" "}
-              {character.gender}
-            </p>
-            <p>
-              <span className="font-semibold text-gray-500">Origin:</span>{" "}
-              {character.origin.name}
-            </p>
-          </div>
-        </Link>
       </div>
+
+      {/*Information section*/}
+      <Link to={`/character/${character.id}`} className="block p-4">
+        {/*Name of the character*/}
+        <h2 className="text-xl font-bold text-white mb-2">{character.name}</h2>
+
+        {/*Status and the species of the character*/}
+        <div className="flex items-center gap-2 text-sm text-gray-300 mb-4">
+          <span className={`w-3 h-3 rounded-full ${getStatusColor()}`} />
+          <span>
+            {character.status} - {character.species}
+          </span>
+        </div>
+
+        {/*Minor details about the characters*/}
+        <div className="text-sm text-gray-400">
+          <p className="mb-1">
+            <span className="font-semibold text-gray-500">Gender:</span>{" "}
+            {character.gender}
+          </p>
+          <p>
+            <span className="font-semibold text-gray-500">Origin:</span>{" "}
+            {character.origin.name}
+          </p>
+        </div>
+      </Link>
     </div>
   );
 };
