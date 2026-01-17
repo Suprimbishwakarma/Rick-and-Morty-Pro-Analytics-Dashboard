@@ -15,13 +15,13 @@ const Landing = () => {
     }, 1000);
   }
   return (
-    <div className="flex flex-col justify-center items-center h-screen overflow-hidden gap-16">
+    <div className="flex flex-col justify-center items-center min-h-screen md:h-screen md:overflow-hidden gap-8 md:gap-16 p-4 md:p-0">
       <InfoSection isOpen={isInfoOpen} onClose={() => setIsInfoOpen(false)} />
       <button className="w-full" onClick={() => setIsInfoOpen(true)}>
         <Info className="flex justify-end cursor-pointer hover:text-black" />
       </button>
       <div className="flex flex-col justify-center items-center gap-6">
-        <h1 className="font-['BBH_Bartle'] text-[30px]">
+        <h1 className="font-['BBH_Bartle'] text-2xl md:text-[30px] text-center md:text-left">
           Rick and Morty Multi-verse Portal
         </h1>
         <p className="text-center italic">
@@ -35,7 +35,7 @@ const Landing = () => {
             <p>Key Features</p>
           </div>
           <div>
-            <ul className="flex flex-col justify-between items-center gap-2 italic text-gray-400">
+            <ul className="flex flex-col justify-between items-center gap-2 italic text-gray-400 text-center md:text-left">
               <li>
                 A responsive grid layout showcasing character imagery with
                 real-time status indicators (Alive, Dead, Unknown).
@@ -70,7 +70,7 @@ const Landing = () => {
         <button
           onClick={handleBeingClicked}
           disabled={isLoading}
-          className={`bg-[#6f9283] text-black hover:bg-[#3a5348] hover:text-white cursor-pointer p-4 rounded-xl transition-all duration-1200 flex items-center justify-center gap-2 ${isLoading ? "opacity-80 cursor-not-allowed" : ""
+          className={`bg-[#6f9283] text-black hover:bg-[#3a5348] hover:text-white cursor-pointer p-4 rounded-xl transition-all duration-1200 flex items-center justify-center gap-2 w-full md:w-auto ${isLoading ? "opacity-80 cursor-not-allowed" : ""
             }`}
         >
           {isLoading ? (
