@@ -102,7 +102,7 @@ const CharacterDetail = () => {
     }[character.status] || "shadow-gray-900";
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto mt-4">
       {/*Simple arrow button to navigate it back to the dashboard*/}
       <button
         onClick={() => navigate(-1)}
