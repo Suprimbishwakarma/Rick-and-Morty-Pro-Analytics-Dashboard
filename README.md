@@ -1,3 +1,5 @@
+![Alt](https://repobeats.axiom.co/api/embed/8e60e0559c9bfb785b2cc9c4e0e08880d4e339ee.svg "Repobeats analytics image")
+
 <div align="center">
 
 # 🔮 Rick and Morty Pro Analytics Dashboard
