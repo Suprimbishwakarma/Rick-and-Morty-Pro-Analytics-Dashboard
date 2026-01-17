@@ -94,7 +94,7 @@ const Home = () => {
   const favoriteSet = useMemo(() => new Set(favorites), [favorites]);
   return (
     <div>
-      <div className="mb-8">
+      <div className="mb-8 mt-4">
         <h2 className="text-3xl font-bold mb-2">Character Explorer</h2>
         <p className="text-gray-400">
           Search and filter through this dashboard
