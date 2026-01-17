@@ -145,4 +145,8 @@ Follow these steps to set up the project locally.
 
 This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
 
+<p align="center">
+    developed by <strong>Suprim Bishwakarma.</strong>
+</p>
+
 ---
