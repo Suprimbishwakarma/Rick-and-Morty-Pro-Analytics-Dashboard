@@ -12,11 +12,11 @@ const InfoSection = ({ isOpen, onClose }: InfoProps) => {
         {/* Content */}
         <div className="p-6 space-y-8">
           {/* About Rick and Morty Section */}
-          <section>
-            <h3 className="text-xl font-bold text-[#6f9283] mb-2 flex items-center gap-2">
+          <section className="flex flex-col sm:justify-center">
+            <h3 className="text-xl font-bold text-[#6f9283] mb-2 flex items-center justify-center md:justify-start gap-2">
               About Rick and Morty
             </h3>
-            <div className="text-gray-300 space-y-4 leading-relaxed text-[12px]">
+            <div className="text-gray-300 space-y-4 leading-relaxed text-[12px] text-center md:text-left">
               <p>
                 <strong>Rick and Morty</strong> is an American adult animated
                 science fiction sitcom regarding the misadventures of cynical
@@ -34,10 +34,10 @@ const InfoSection = ({ isOpen, onClose }: InfoProps) => {
 
           {/* About Project Section */}
           <section>
-            <h3 className="text-xl font-bold text-[#6f9283] mb-2 flex items-center gap-2">
+            <h3 className="text-xl font-bold text-[#6f9283] mb-2 flex items-center justify-center md:justify-start gap-2">
               About This Project
             </h3>
-            <div className="text-gray-300 space-y-4 leading-relaxed text-[12px]">
+            <div className="text-gray-300 space-y-4 leading-relaxed text-[12px] text-center md:text-left">
               <p>
                 The <strong>Rick and Morty Pro Analytics Dashboard</strong> is a
                 professional-grade explorer designed for fans and developers
@@ -46,7 +46,7 @@ const InfoSection = ({ isOpen, onClose }: InfoProps) => {
 
               <div className="bg-[#3b3f44] p-4 rounded-lg border border-gray-700">
                 <h4 className="font-semibold text-white mb-2">Tech Stack:</h4>
-                <ul className="list-disc list-inside space-y-1 text-gray-400 text-[12px]">
+                <ul className="list-disc list-inside space-y-1 text-gray-400 text-[12px] text-center md:text-left">
                   <li>
                     <span className="text-blue-400">React 19</span> for
                     high-performance UI
