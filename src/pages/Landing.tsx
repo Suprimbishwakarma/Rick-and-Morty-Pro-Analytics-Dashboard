@@ -1,4 +1,4 @@
-import { Info, Key } from "lucide-react";
+import { Info, Key, LoaderPinwheel } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import InfoSection from "../components/Info";
@@ -6,9 +6,13 @@ import InfoSection from "../components/Info";
 const Landing = () => {
   const navigate = useNavigate();
   const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   function handleBeingClicked() {
-    navigate("/dashboard");
+    setIsLoading(true);
+    setTimeout(() => {
+      navigate("/dashboard");
+    }, 1000);
   }
   return (
     <div className="flex flex-col justify-center items-center h-screen overflow-hidden gap-16">
@@ -65,9 +69,18 @@ const Landing = () => {
         </div>
         <button
           onClick={handleBeingClicked}
-          className="bg-[#6f9283] text-black hover:bg-[#3a5348] hover:text-white cursor-pointer p-4 rounded-xl transition-all duration-1200"
+          disabled={isLoading}
+          className={`bg-[#6f9283] text-black hover:bg-[#3a5348] hover:text-white cursor-pointer p-4 rounded-xl transition-all duration-1200 flex items-center justify-center gap-2 ${isLoading ? "opacity-80 cursor-not-allowed" : ""
+            }`}
         >
-          Lets explore characters
+          {isLoading ? (
+            <>
+              <LoaderPinwheel className="animate-spin" />
+              <span>Exploring...</span>
+            </>
+          ) : (
+            "Lets explore characters"
+          )}
         </button>
       </div>
     </div>
