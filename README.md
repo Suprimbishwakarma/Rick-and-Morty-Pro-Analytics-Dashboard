@@ -41,7 +41,7 @@ The **Rick and Morty Pro Analytics Dashboard** is a state-of-the-art web applica
 
 ## 📸 Screenshots
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/a8fdefef-946b-4bd7-9cab-a46b1950984e" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/e7941dd7-8481-43a7-a295-fe7b6978403c" />
 
 <img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/7ceaef1a-9b44-459a-9473-4bef8db9c557" />
 
