@@ -1,15 +1,19 @@
 import { Info, Key } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import InfoSection from "../components/Info";
 
 const Landing = () => {
   const navigate = useNavigate();
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   function handleBeingClicked() {
     navigate("/dashboard");
   }
   return (
     <div className="flex flex-col justify-center items-center h-screen overflow-hidden gap-16">
-      <button className="w-full">
+      <InfoSection isOpen={isInfoOpen} onClose={() => setIsInfoOpen(false)} />
+      <button className="w-full" onClick={() => setIsInfoOpen(true)}>
         <Info className="flex justify-end cursor-pointer hover:text-black" />
       </button>
       <div className="flex flex-col justify-center items-center gap-6">
